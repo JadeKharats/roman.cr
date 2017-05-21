@@ -20,4 +20,14 @@ describe Roman do
     converter = Roman::Convert.new
     converter.arabean(5).should eq("V")
   end
+
+  it "converts the number 6 to the string VI" do
+    converter = Roman::Convert.new
+    converter.arabean(6).should eq("VI")
+  end
+
+  it "converts the number 7 to the string VII" do
+    converter = Roman::Convert.new
+    converter.arabean(7).should eq("VII")
+  end
 end
