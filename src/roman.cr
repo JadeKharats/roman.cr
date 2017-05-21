@@ -27,6 +27,9 @@ module Roman
         when n >= 50
           roman = roman + "L"
           n = n - 50
+        when n >= 40
+          roman = roman + "XL"
+          n = n - 40
         when n >= 10
           roman = roman + "X"
           n = n - 10
