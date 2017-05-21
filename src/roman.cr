@@ -1,5 +1,9 @@
 require "./roman/*"
 
 module Roman
-  # TODO Put your code here
+  class Convert
+    def arabean(n)
+      return "I"
+    end
+  end
 end
