@@ -11,9 +11,9 @@ describe Roman do
     converter.arabean(2).should eq("II")
   end
 
-  it "converts the number 4 to the string IIII" do
+  it "converts the number 4 to the string IV" do
     converter = Roman::Convert.new
-    converter.arabean(4).should eq("IIII")
+    converter.arabean(4).should eq("IV")
   end
 
   it "converts the number 5 to the string V" do
