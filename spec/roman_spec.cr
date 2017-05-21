@@ -10,4 +10,9 @@ describe Roman do
     converter = Roman::Convert.new
     converter.arabean(2).should eq("II")
   end
+
+  it "converts the number 5 to the string V" do
+    converter = Roman::Convert.new
+    converter.arabean(5).should eq("V")
+  end
 end
