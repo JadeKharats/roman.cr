@@ -9,6 +9,9 @@ module Roman
         when n >= 10
           roman = roman + "X"
           n = n - 10
+        when n >= 9
+          roman = roman + "IX"
+          n = n - 9
         when n >= 5
           roman = roman + "V"
           n = n - 5
