@@ -3,7 +3,7 @@ require "./roman/*"
 module Roman
   class Convert
     def arabean(n)
-      return "I"
+      return "I"*n
     end
   end
 end
