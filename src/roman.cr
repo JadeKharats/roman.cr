@@ -12,6 +12,9 @@ module Roman
         when n >= 5
           roman = roman + "V"
           n = n - 5
+        when n >= 4
+          roman = roman + "IV"
+          n = n - 4
         else
           roman = roman + "I"
           n = n - 1
