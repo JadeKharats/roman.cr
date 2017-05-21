@@ -40,4 +40,9 @@ describe Roman do
     converter = Roman::Convert.new
     converter.arabean(10).should eq("X")
   end
+
+  it "converts the number 2896 to the string MMDCCCXCVI" do
+    converter = Roman::Convert.new
+    converter.arabean(2896).should eq("MMDCCCXCVI")
+  end
 end
