@@ -9,6 +9,9 @@ module Roman
         when n >= 1000
           roman = roman + "M"
           n = n - 1000
+        when n >= 900
+          roman = roman + "IM"
+          n = n - 900
         when n >= 10
           roman = roman + "X"
           n = n - 10
