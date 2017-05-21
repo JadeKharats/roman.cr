@@ -1,6 +1,8 @@
 # roman
 
-TODO: Write a description here
+Lib to convert a Hindu-Arabic number to Roman number.
+
+I use this lib to learn how to test.
 
 ## Installation
 
@@ -9,7 +11,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   roman:
-    github: [your-github-name]/roman
+    github: JadeKharats/roman
 ```
 
 ## Usage
@@ -18,11 +20,11 @@ dependencies:
 require "roman"
 ```
 
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
+```crystal
+converter = Roman::Convert.new
+converter.arabean(1)
+=> "I"
+```
 
 ## Contributing
 
@@ -34,4 +36,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Jade D. Kharats - creator, maintainer
+- [[JadeKharats]](https://github.com/JadeKharats) Jade D. Kharats - creator, maintainer
