@@ -1,6 +1,12 @@
 require "./roman/*"
 
+# The main Roman module
 module Roman
+  # Convet
+  #
+  # ```
+  # Roman.convert(2896) # => "MMDCCCXCVI"
+  # ```
   def self.convert(n)
     roman = ""
     while n > 0
