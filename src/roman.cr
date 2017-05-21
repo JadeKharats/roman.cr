@@ -6,6 +6,9 @@ module Roman
       roman = ""
       while n > 0
         case
+        when n >= 1000
+          roman = roman + "M"
+          n = n - 1000
         when n >= 10
           roman = roman + "X"
           n = n - 10
