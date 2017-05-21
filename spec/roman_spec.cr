@@ -31,6 +31,11 @@ describe Roman do
     converter.arabean(7).should eq("VII")
   end
 
+  it "converts the number 9 to the string IX" do
+    converter = Roman::Convert.new
+    converter.arabean(9).should eq("IX")
+  end
+
   it "converts the number 10 to the string X" do
     converter = Roman::Convert.new
     converter.arabean(10).should eq("X")
