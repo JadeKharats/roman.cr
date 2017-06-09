@@ -1,5 +1,7 @@
 # roman
 
+[![Build Status](https://travis-ci.org/JadeKharats/roman.cr.svg?branch=master)](https://travis-ci.org/JadeKharats/roman.cr)
+
 Lib to convert a Hindu-Arabic number to Roman number.
 
 I use this lib to learn how to test.
