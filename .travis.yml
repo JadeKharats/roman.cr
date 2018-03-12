@@ -6,4 +6,5 @@ addons:
 
 after_success:
   - crystal build --release spec/roman_spec.cr
-  - kcov --exclude-pattern=/usr/share,/usr/include --coveralls-id=$TRAVIS_JOB_ID coverage ./roman_spec
+  - kcov --exclude-pattern=/usr/share,/usr/include coverage ./roman_spec
+  - bash <(curl -s https://codecov.io/bash) -s coverage
