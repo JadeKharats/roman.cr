@@ -3,3 +3,8 @@ addons:
   apt:
     packages:
     - kcov
+
+after_success:
+  - sudo apt install kcov
+  - crystal build --release spec/roman_spec.cr
+  - kcov --exclude-pattern=/usr/share coverage,/usr/include ./roman_spec
