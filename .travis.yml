@@ -5,6 +5,5 @@ addons:
     - kcov
 
 after_success:
-  - sudo apt install kcov
   - crystal build --release spec/roman_spec.cr
   - kcov --exclude-pattern=/usr/share,/usr/include --coveralls-id=$TRAVIS_JOB_ID coverage ./roman_spec
