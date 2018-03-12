@@ -1,8 +1,0 @@
-var data = {lines:[
-{"lineNum":"    1","line":"lib LibC","class":"lineNoCov","hits":"0","possible_hits":"1",},
-{"lineNum":"    2","line":"  SYS_getrandom = 318"},
-{"lineNum":"    3","line":"end"},
-]};
-var percent_low = 25;var percent_high = 75;
-var header = { "command" : "roman_spec", "date" : "2018-03-12 14:20:30", "instrumented" : 1, "covered" : 0,};
-var merged_data = [];
