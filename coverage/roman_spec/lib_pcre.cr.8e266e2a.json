@@ -1,0 +1,33 @@
+var data = {lines:[
+{"lineNum":"    1","line":"@[Link(\"pcre\")]"},
+{"lineNum":"    2","line":"lib LibPCRE"},
+{"lineNum":"    3","line":"  alias Int = LibC::Int"},
+{"lineNum":"    4","line":""},
+{"lineNum":"    5","line":"  type Pcre = Void*"},
+{"lineNum":"    6","line":"  type PcreExtra = Void*"},
+{"lineNum":"    7","line":"  fun compile = pcre_compile(pattern : UInt8*, options : Int, errptr : UInt8**, erroffset : Int*, tableptr : Void*) : Pcre"},
+{"lineNum":"    8","line":"  fun study = pcre_study(code : Pcre, options : Int, errptr : UInt8**) : PcreExtra"},
+{"lineNum":"    9","line":"  fun exec = pcre_exec(code : Pcre, extra : PcreExtra, subject : UInt8*, length : Int, offset : Int, options : Int,"},
+{"lineNum":"   10","line":"                       ovector : Int*, ovecsize : Int) : Int32"},
+{"lineNum":"   11","line":"  fun full_info = pcre_fullinfo(code : Pcre, extra : PcreExtra, what : Int, where : Int32*) : Int"},
+{"lineNum":"   12","line":"  fun get_stringnumber = pcre_get_stringnumber(code : Pcre, string_name : UInt8*) : Int"},
+{"lineNum":"   13","line":"  fun get_stringtable_entries = pcre_get_stringtable_entries(code : Pcre, name : UInt8*, first : UInt8**, last : UInt8**) : Int"},
+{"lineNum":"   14","line":""},
+{"lineNum":"   15","line":"  INFO_CAPTURECOUNT  = 2"},
+{"lineNum":"   16","line":"  INFO_NAMEENTRYSIZE = 7"},
+{"lineNum":"   17","line":"  INFO_NAMECOUNT     = 8"},
+{"lineNum":"   18","line":"  INFO_NAMETABLE     = 9"},
+{"lineNum":"   19","line":""},
+{"lineNum":"   20","line":"  alias Malloc = LibC::SizeT -> Void*"},
+{"lineNum":"   21","line":"  alias Free = Void* ->"},
+{"lineNum":"   22","line":""},
+{"lineNum":"   23","line":"  $pcre_malloc : Malloc"},
+{"lineNum":"   24","line":"  $pcre_free : Free"},
+{"lineNum":"   25","line":"end"},
+{"lineNum":"   26","line":""},
+{"lineNum":"   27","line":"LibPCRE.pcre_malloc = ->GC.malloc(LibC::SizeT)","class":"lineNoCov","hits":"0","possible_hits":"1",},
+{"lineNum":"   28","line":"LibPCRE.pcre_free = ->GC.free(Void*)","class":"lineNoCov","hits":"0","possible_hits":"1",},
+]};
+var percent_low = 25;var percent_high = 75;
+var header = { "command" : "roman_spec", "date" : "2018-03-12 14:24:04", "instrumented" : 2, "covered" : 0,};
+var merged_data = [];

@@ -1,0 +1,15 @@
+var data = {lines:[
+{"lineNum":"    1","line":"class IO"},
+{"lineNum":"    2","line":"  class Error < Exception"},
+{"lineNum":"    3","line":"  end"},
+{"lineNum":"    4","line":""},
+{"lineNum":"    5","line":"  class EOFError < Error"},
+{"lineNum":"    6","line":"    def initialize(message = \"End of file reached\")","class":"lineNoCov","hits":"0","possible_hits":"3",},
+{"lineNum":"    7","line":"      super(message)","class":"lineNoCov","hits":"0","possible_hits":"1",},
+{"lineNum":"    8","line":"    end"},
+{"lineNum":"    9","line":"  end"},
+{"lineNum":"   10","line":"end"},
+]};
+var percent_low = 25;var percent_high = 75;
+var header = { "command" : "roman_spec", "date" : "2018-03-12 14:20:30", "instrumented" : 2, "covered" : 0,};
+var merged_data = [];
