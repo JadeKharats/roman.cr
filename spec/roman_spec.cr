@@ -33,6 +33,14 @@ describe Roman do
     Roman.convert(10).should eq("X")
   end
 
+  it "converts the number 442 to the string CDXLII" do
+    Roman.convert(442).should eq("CDXLII")
+  end
+
+  it "converts the number 954 to the string CMLIV" do
+    Roman.convert(954).should eq("CMLIV")
+  end
+
   it "converts the number 2896 to the string MMDCCCXCVI" do
     Roman.convert(2896).should eq("MMDCCCXCVI")
   end
