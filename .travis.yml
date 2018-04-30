@@ -1,10 +1,1 @@
 language: crystal
-addons:
-  apt:
-    packages:
-    - kcov
-
-after_success:
-  - crystal build --release spec/roman_spec.cr
-  - kcov --exclude-pattern=/usr/share,/usr/include coverage ./roman_spec
-  - bash <(curl -s https://codecov.io/bash) -s coverage
