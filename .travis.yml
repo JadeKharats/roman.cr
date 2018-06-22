@@ -4,3 +4,4 @@ install:
 script:
   - crystal spec
   - bin/ameba
+  - bin/crystal-coverage spec/roman_spec.cr -o coveralls
