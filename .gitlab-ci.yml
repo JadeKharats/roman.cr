@@ -32,6 +32,6 @@ spec:
   - crystal spec
 
 # If you are using minitest.cr
-minitest:
-  script:
-  - crystal test/spec_test.cr # change to the file(s) you execute for tests
+# minitest:
+  # script:
+  #  - crystal test/spec_test.cr # change to the file(s) you execute for tests
