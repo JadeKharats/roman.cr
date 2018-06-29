@@ -30,6 +30,10 @@ before_script:
 spec:
   script:
   - crystal spec
+  
+ameba:
+  script:
+  - bin/ameba
 
 # If you are using minitest.cr
 # minitest:
