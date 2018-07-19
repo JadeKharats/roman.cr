@@ -18,6 +18,10 @@
 #  paths:
 #    - lib
 
+stages:
+  - test
+  - coverage
+
 # This is a basic example for a shard or script which doesn't use
 # services such as redis or postgres
 before_script:
@@ -27,24 +31,44 @@ before_script:
 
 # If you are using built-in Crystal Spec.
 spec:latest:
+  stage: test
   image: "crystallang/crystal:latest"
   script:
-  - crystal spec
+  - ./bin/crystal-coverage spec/roman_spec.cr 
+  artifacts:
+    paths:
+      - coverage/
   
 ameba:latest:
+  stage: test
   image: "crystallang/crystal:latest"
   script:
   - bin/ameba
   
 spec:nightly:
+  stage: test
   image: "crystallang/crystal:nightly"
   script:
   - crystal spec
   
 ameba:nightly:
+  stage: test
   image: "crystallang/crystal:nightly"
   script:
   - bin/ameba
+
+pages:
+  stage: coverage
+  dependencies:
+    - spec:latest
+  script:
+    - mv coverage/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  only:
+    - master
 
 # If you are using minitest.cr
 # minitest:
