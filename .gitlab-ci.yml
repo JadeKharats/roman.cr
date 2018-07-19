@@ -24,13 +24,15 @@ stages:
 
 # This is a basic example for a shard or script which doesn't use
 # services such as redis or postgres
-before_script:
-  - apt-get update -qq && apt-get install -y -qq libxml2-dev
-  - crystal -v # Print out Crystal version for debugging
-  - shards
+.shared_hidden_key: &shared  # This is an anchor
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq libxml2-dev
+    - crystal -v # Print out Crystal version for debugging
+    - shards
 
 # If you are using built-in Crystal Spec.
 spec:latest:
+  <<: *shared
   stage: test
   image: "crystallang/crystal:latest"
   script:
@@ -40,18 +42,21 @@ spec:latest:
       - coverage/
   
 ameba:latest:
+  <<: *shared
   stage: test
   image: "crystallang/crystal:latest"
   script:
   - bin/ameba
   
 spec:nightly:
+  <<: *shared
   stage: test
   image: "crystallang/crystal:nightly"
   script:
   - crystal spec
   
 ameba:nightly:
+  <<: *shared
   stage: test
   image: "crystallang/crystal:nightly"
   script:
