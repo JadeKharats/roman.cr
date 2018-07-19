@@ -8,6 +8,10 @@ crystal: 0.25.0
 
 license: MIT
 
+targets:
+  roman:
+    main: src/roman.cr
+
 development_dependencies:
   coverage:
     github: anykeyh/crystal-coverage
