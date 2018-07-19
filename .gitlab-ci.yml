@@ -26,13 +26,23 @@ before_script:
   - shards
 
 # If you are using built-in Crystal Spec.
-spec:
+spec:latest:
   image: "crystallang/crystal:latest"
   script:
   - crystal spec
   
-ameba:
+ameba:latest:
   image: "crystallang/crystal:latest"
+  script:
+  - bin/ameba
+  
+spec:nightly:
+  image: "crystallang/crystal:nightly"
+  script:
+  - crystal spec
+  
+ameba:nightly:
+  image: "crystallang/crystal:nightly"
   script:
   - bin/ameba
 
