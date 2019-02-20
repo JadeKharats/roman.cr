@@ -1,5 +1,6 @@
 # roman
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/135b2a4c035849e28ed5404c313a9e37)](https://app.codacy.com/app/david_16/roman.cr?utm_source=github.com&utm_medium=referral&utm_content=JadeKharats/roman.cr&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/JadeKharats/roman.cr.svg?branch=master)](https://travis-ci.org/JadeKharats/roman.cr)
 
 Lib to convert a Hindu-Arabic number to Roman number.
