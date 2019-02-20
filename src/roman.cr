@@ -52,6 +52,6 @@ module Roman
         n = n - 1
       end
     end
-    return roman
+    roman
   end
 end
